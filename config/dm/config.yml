@@ -1,0 +1,16 @@
+default:
+  dmJsCompilerPlugin:
+    inner_dirs:                 # directories in web dir of plugins which JS files residues.
+      - js
+      - lib
+      - other
+      - others
+    compiled_js_files_suffix:   # which suffix is used for javascript files that are compiled.
+      - min
+      - pack
+      - minified
+      - packed
+      - compressed
+      - minimized
+      - compiled
+    search_max_depth: 100000    # max depth of recursive search for JS files in directories.

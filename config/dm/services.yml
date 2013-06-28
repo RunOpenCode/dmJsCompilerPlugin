@@ -1,0 +1,19 @@
+parameters:
+
+  js_compiler.class:            dmJsCompilerService
+  js_compiler.options:
+    compiler_class:             dmJavaScriptPackerJsCompiler
+    compiler_options:
+      encoding: 62
+      fast_decode: true
+      special_chars: false
+    js_finder_class:            dmJsFileFinder
+    compiled_js_sufix:          min
+
+
+
+services:
+  js_compiler:
+    class:                    %js_compiler.class%
+    shared:                   true
+    arguments:                [ @service_container, @event_log, @console_log, %js_compiler.options% ]
